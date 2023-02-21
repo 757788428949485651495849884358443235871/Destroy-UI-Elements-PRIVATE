@@ -41,6 +41,8 @@ local Window = Rayfield:CreateWindow({
 })
 local Tab = Window:CreateTab("Main", 4483362458)
 
+-- Main Tab
+
 local Section = Tab:CreateSection("Chat")
 
 local HideChatToggle = Tab:CreateToggle({
@@ -67,4 +69,126 @@ local HideBubbleChatToggle = Tab:CreateToggle({
        end
    end,
 })
+local Section = Tab:CreateSection("Main UI")
+
+local StatsUIToggle = Tab:CreateToggle({
+    Name = "Hide Stats UI",
+    CurrentValue = false,
+    Flag = "StatsUI",
+    Callback = function(Value)
+        if Value then
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Visible = false
+        else
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Visible = true
+        end
+    end,
+ })
+ local LevelToggle = Tab:CreateToggle({
+    Name = "Hide Level",
+    CurrentValue = false,
+    Flag = "Level",
+    Callback = function(Value)
+        if Value then
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Level.Visible = false
+        else
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Level.Visible = true
+        end
+    end,
+ })
+ local CodesToggle = Tab:CreateToggle({
+    Name = "Hide Codes Button",
+    CurrentValue = false,
+    Flag = "Codes",
+    Callback = function(Value)
+        if Value then
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Buttons.Codes.Visible = false
+        else
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Buttons.Codes.Visible = true
+        end
+    end,
+ })
+ local StoreToggle = Tab:CreateToggle({
+    Name = "Hide Store Button",
+    CurrentValue = false,
+    Flag = "Store",
+    Callback = function(Value)
+        if Value then
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Buttons.Shop.Visible = false
+        else
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Buttons.Shop.Visible = true
+        end
+    end,
+ })
+ local RankToggle = Tab:CreateToggle({
+    Name = "Hide Rank Button",
+    CurrentValue = false,
+    Flag = "Rank",
+    Callback = function(Value)
+        if Value then
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Buttons.Rank.Visible = false
+        else
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Buttons.Rank.Visible = true
+        end
+    end,
+ })
+ local MusicToggle = Tab:CreateToggle({
+    Name = "Hide Music Button",
+    CurrentValue = false,
+    Flag = "Music",
+    Callback = function(Value)
+        if Value then
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Buttons.Music.Visible = false
+        else
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Buttons.Music.Visible = true
+        end
+    end,
+ })
+ local StatUIToggle = Tab:CreateToggle({
+    Name = "Hide Stats UI",
+    CurrentValue = false,
+    Flag = "Store",
+    Callback = function(Value)
+        if Value then
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Stats.Visible = false
+        else
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Stats.Visible = true
+        end
+    end,
+ })
+ local BoostsUIToggle = Tab:CreateToggle({
+    Name = "Hide Boosts UI",
+    CurrentValue = false,
+    Flag = "Store",
+    Callback = function(Value)
+        if Value then
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Boosts.Visible = false
+        else
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StatsFrame.Boosts.Visible = true
+        end
+    end,
+ })
+ local StoragePopupToggle = Tab:CreateToggle({
+    Name = "Hide Storage Full Popup",
+    CurrentValue = false,
+    Flag = "StoragePopup",
+    Callback = function(Value)
+        if Value then
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StoragePopupFrame.Visible = false
+        else
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StoragePopupFrame.Visible = true
+        end
+    end,
+ })
+ local StoragePopupToggle = Tab:CreateToggle({
+    Name = "Hide Storage Popup Advertisement",
+    CurrentValue = false,
+    Flag = "StorageAdvertisement",
+    Callback = function(Value)
+        if Value then
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StoragePopupFrame.Frame.CratePart2.Visible = false
+        else
+            game:GetService("Players").LocalPlayer.PlayerGui.MainUI.StoragePopupFrame.Frame.CratePart2.Visible = true
+        end
+    end,
+ })
 Rayfield:LoadConfiguration()
