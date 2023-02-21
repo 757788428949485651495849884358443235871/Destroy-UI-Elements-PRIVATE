@@ -57,20 +57,24 @@ local HideChatToggle = Tab:CreateToggle({
        end
    end,
 })
-local HideBubbleChatToggle = Tab:CreateToggle({
-   Name = "Hide Bubble Chat",
-   CurrentValue = false,
-   Flag = "BubbleChat",
-   Callback = function(Value)
-       if Value then
-         game.Chat.BubbleChatEnabled = false
-       else
-         game.Chat.BubbleChatEnabled = true
-       end
-   end,
-})
-local Section = Tab:CreateSection("Main UI")
+local Tab = Window:CreateTab("Main UI", 4483362458)
 
+-- Main UI Tab
+
+local LoadingScreenToggle = Tab:CreateToggle({
+    Name = "Hide Loading Screen",
+    CurrentValue = false,
+    Flag = "LoadingScreen",
+    Callback = function(Value)
+        if Value then
+            game:GetService("Players").LocalPlayer.PlayerGui.LoadingScreen.white.Visible = false
+            game:GetService("Players").LocalPlayer.PlayerGui.LoadingScreen.Warning.Visible = false
+        else
+            game:GetService("Players").LocalPlayer.PlayerGui.LoadingScreen.white.Visible = true
+            game:GetService("Players").LocalPlayer.PlayerGui.LoadingScreen.Warning.Visible = true
+        end
+    end,
+ })
 local StatsUIToggle = Tab:CreateToggle({
     Name = "Hide Stats UI",
     CurrentValue = false,
