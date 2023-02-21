@@ -55,12 +55,6 @@ Rayfield:Notify({
           end
       end,
   })
-  local HideStreakButton = Tab:CreateButton({
-    Name = "Hide Streak",
-    Callback = function()
-        game:GetService("Players").LocalPlayer.PlayerGui.GUI.Interface.Vitals.Streak:Destroy()
-    end,
- })
  local Tab = Window:CreateTab("Themes", 4483362458)
 
  -- Themes Tab
