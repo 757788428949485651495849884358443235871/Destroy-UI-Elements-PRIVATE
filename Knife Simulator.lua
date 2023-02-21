@@ -21,7 +21,7 @@ local Window = Rayfield:CreateWindow({
    ConfigurationSaving = {
       Enabled = true,
       FolderName = "Destroy UI Elements [PRIVATE]",
-      FileName = "[UPDATE] Knife Simulator"
+      FileName = "Knife Simulator"
    },
    Discord = {
       Enabled = false,
@@ -125,4 +125,14 @@ local ShopButtonToggle = Tab:CreateToggle({
         end
     end,
  })
+ local Tab = Window:CreateTab("Miscellaneous", 4483362458)
+
+-- Miscellaneous Tab
+
+  local DestroyButton = Tab:CreateButton({
+   Name = "Destroy",
+   Callback = function()
+      Rayfield:Destroy()
+   end,
+})
 Rayfield:LoadConfiguration()
