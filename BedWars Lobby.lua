@@ -41,6 +41,7 @@ local Window = Rayfield:CreateWindow({
 })
 local Tab = Window:CreateTab("Main", 4483362458)
 
+-- Main Tab
 local Section = Tab:CreateSection("Chat")
 
 local HideChatToggle = Tab:CreateToggle({
@@ -93,19 +94,14 @@ local TopBarToggle = Tab:CreateToggle({
        end
    end,
 })
-local EmoteUIToggle = Tab:CreateToggle({
-   Name = "Hide Emote UI",
-   CurrentValue = false,
-   Flag = "EmoteUI",
-   Callback = function(Value)
-       if Value then
-         local StarterGui = game:GetService("StarterGui")
-         StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
-       else
-         local StarterGui = game:GetService("StarterGui")
-         StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, true)
-       end
+local Tab = Window:CreateTab("Miscellaneous", 4483362458)
+
+-- Miscellaneous Tab
+
+  local DestroyButton = Tab:CreateButton({
+   Name = "Destroy",
+   Callback = function()
+      Rayfield:Destroy()
    end,
 })
-
 Rayfield:LoadConfiguration()
