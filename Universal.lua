@@ -21,7 +21,7 @@ local Window = Rayfield:CreateWindow({
    ConfigurationSaving = {
       Enabled = true,
       FolderName = "Destroy UI Elements [PRIVATE]",
-      FileName = "BedWars Lobby"
+      FileName = "Universal"
    },
    Discord = {
       Enabled = false,
@@ -40,6 +40,8 @@ local Window = Rayfield:CreateWindow({
    }
 })
 local Tab = Window:CreateTab("Main", 4483362458)
+
+-- Main Tab
 
 local Section = Tab:CreateSection("Roblox UI")
 
