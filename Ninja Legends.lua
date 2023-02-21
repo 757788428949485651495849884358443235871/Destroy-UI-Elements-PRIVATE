@@ -265,10 +265,14 @@ local StatsToggle = Tab:CreateToggle({
             game:GetService("Players").LocalPlayer.PlayerGui.gameGui.currencyFrame.strengthFrame.Visible = false
             game:GetService("Players").LocalPlayer.PlayerGui.gameGui.currencyFrame.gemsFrame.Visible = false
             game:GetService("Players").LocalPlayer.PlayerGui.gameGui.currencyFrame.chiFrame.Visible = false
+            game:GetService("Players").LocalPlayer.PlayerGui.gameGui.currencyFrame.excludeFolder.currencyFrame.soulsFrame.Visible = false
+            game:GetService("Players").LocalPlayer.PlayerGui.gameGui.currencyFrame.excludeFolder.currencyFrame.karmaFrame.Visible = false
         else
             game:GetService("Players").LocalPlayer.PlayerGui.gameGui.currencyFrame.strengthFrame.Visible = true
             game:GetService("Players").LocalPlayer.PlayerGui.gameGui.currencyFrame.gemsFrame.Visible = true
             game:GetService("Players").LocalPlayer.PlayerGui.gameGui.currencyFrame.chiFrame.Visible = true
+            game:GetService("Players").LocalPlayer.PlayerGui.gameGui.currencyFrame.excludeFolder.currencyFrame.soulsFrame.Visible = true
+            game:GetService("Players").LocalPlayer.PlayerGui.gameGui.currencyFrame.excludeFolder.currencyFrame.karmaFrame.Visible = true
         end
     end,
  })
