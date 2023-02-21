@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 
 Rayfield:Notify({
    Title = "Game Found",
-   Content = "Supported Game Found: ⚡Ninja Legends",
+   Content = "Supported Game Found: Ninja Legends",
    Duration = 6.5,
    Image = 4483362458,
    Actions = {
