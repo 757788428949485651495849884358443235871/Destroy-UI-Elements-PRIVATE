@@ -97,6 +97,7 @@ local Tab = Window:CreateTab("Game UI", 4483362458)
 local Section = Tab:CreateSection("Main UI")
 
 -- Game UI Tab
+
 local StatsToggle = Tab:CreateToggle({
     Name = "Hide Stats Button",
     CurrentValue = false,
@@ -331,4 +332,14 @@ local StatsToggle = Tab:CreateToggle({
         end
     end,
  })
+ local Tab = Window:CreateTab("Miscellaneous", 4483362458)
+
+-- Miscellaneous Tab
+
+  local DestroyButton = Tab:CreateButton({
+   Name = "Destroy",
+   Callback = function()
+      Rayfield:Destroy()
+   end,
+})
 Rayfield:LoadConfiguration()
