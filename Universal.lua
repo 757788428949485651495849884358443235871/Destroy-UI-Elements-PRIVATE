@@ -67,4 +67,30 @@ local HideBubbleChatToggle = Tab:CreateToggle({
        end
    end,
 })
+local HideLeaderBoardToggle = Tab:CreateToggle({
+   Name = "Hide LeaderBoard",
+   CurrentValue = false,
+   Flag = "LeaderBoard",
+   Callback = function(Value)
+       if Value then
+         game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+       else
+         game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, true)
+       end
+   end,
+})
+local EmoteUIToggle = Tab:CreateToggle({
+   Name = "Hide Emote UI",
+   CurrentValue = false,
+   Flag = "EmoteUI",
+   Callback = function(Value)
+       if Value then
+         local StarterGui = game:GetService("StarterGui")
+         StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
+       else
+         local StarterGui = game:GetService("StarterGui")
+         StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, true)
+       end
+   end,
+})
 Rayfield:LoadConfiguration()
