@@ -41,7 +41,7 @@ local Window = Rayfield:CreateWindow({
 })
 local Tab = Window:CreateTab("Main", 4483362458)
 
-local Section = Tab:CreateSection("Chat")
+local Section = Tab:CreateSection("Roblox UI")
 
 local HideChatToggle = Tab:CreateToggle({
    Name = "Hide Chat",
