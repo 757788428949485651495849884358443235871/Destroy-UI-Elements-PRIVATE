@@ -108,8 +108,10 @@ local ShopButtonToggle = Tab:CreateToggle({
     Callback = function(Value)
         if Value then
             game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.HoldTo.Visible = false
+            game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Shop.cash.Visible = false
         else
             game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.HoldTo.Visible = true
+            game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Shop.cash.Visible = true
         end
     end,
  })
@@ -122,6 +124,18 @@ local ShopButtonToggle = Tab:CreateToggle({
             game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MemeMusic.Playing = false
         else
             game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MemeMusic.Playing = true
+        end
+    end,
+ })
+ local RemoveAdvertisementsToggle = Tab:CreateToggle({
+    Name = "Remove Robux Advertisements",
+    CurrentValue = false,
+    Flag = "RemoveAdvertisements",
+    Callback = function(Value)
+        if Value then
+            game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Shop.radio.Visible = false
+        else
+            game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Shop.radio.Visible = true
         end
     end,
  })
